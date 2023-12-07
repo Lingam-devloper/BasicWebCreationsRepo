@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPlayer</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h4>Music Player</h4>
+        <img id="track-image" height="300px" width="300px">
+        <p id="title">title.mp3</p>
+        <marquee id="artist">Artist name</marquee>
+        <input type="range" id="range" min="0" max="100" value="0" onclick="change_duration()">
+        <button id="pre" onclick="previous_song()"><i class="fa fa-step-backward" ></i></button>
+        <button id="play" onclick="play()"><i class="fa fa-play"></i></button>
+        <button id="next" onclick="next_song()"><i class="fa fa-step-forward" ></i></button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

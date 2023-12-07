@@ -7,7 +7,6 @@ let slider = document.querySelector("#range");
 let image = document.querySelector("#track-image");
 let play_button_icon = document.querySelector("#play i");
 
-let timer;
 let autoplay = 1;
 let starting = 0;
 let playingSong = false;
@@ -34,17 +33,12 @@ let all_songs = [
 ];
 
 function load_track(starting) {
-    clearInterval(timer);
     reset_slider();
-
     track.src = all_songs[starting].path;
     title.innerHTML = all_songs[starting].name;
     image.src = all_songs[starting].img;
     artist.innerHTML = all_songs[starting].artist;
-
-    timer = setInterval(reset_slider, 1000);
     title.innerHTML =all_songs[starting].name;
-   
 }
 load_track(starting);
 
@@ -93,8 +87,12 @@ function next_song() {
 function reset_slider() {
     slider.value = 0;
 }
-
 function change_duration() {
-    slider_position = track.duration * (slider.value / 100);
+    let slider_position = track.duration * (slider.value / 100);
     track.currentTime = slider_position;
 }
+
+track.addEventListener("timeupdate", function () {
+    let position = track.currentTime / track.duration;
+    slider.value = position * 100;
+});

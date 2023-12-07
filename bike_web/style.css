@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #5485e6;
+}
+ul{
+    position: absolute;
+    top: 5%;
+    right:5%;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    
+}
+.bikes{
+    padding: 2%;
+}
+.bikes li{
+    position: relative;
+    list-style: none;
+    padding-top: 50px;
+    margin-top: 50px;
+}
+.bikes img{
+    display: block;
+    max-width: 120px;
+    transition: 0.5s;
+}
+.bikes img:hover{
+    transform: translateX(30px);
+    transition:0.5s;
+}
+.big-image img{
+    position: absolute;
+    max-width: 500px;
+    max-height: 300px;
+    left: 18%;
+    top: 20%;
+}
+.content{
+    position: absolute;
+    cursor: pointer;
+    max-width: 50%;
+    right: 3%;
+    top: 20%;
+}
+.content p{
+    color: black;
+    font-size: 50px;
+    font-weight: 300;
+    text-shadow:2px 0px 5px rgba(0,0,0,.5); 
+    font-family:arial;
+    margin-left: 37%;
+    padding-top: 90px;
+}
+.content h1{
+    font-size: 60px;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 255, 238);
+    padding-left: 100px;
+}
+.content h5{
+    font-size: 22px;
+    padding-left: 100px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
+    margin-left: 150px;
+}
+.path{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background:#e5e5e5;
+    clip-path: circle(520px at left);
+}
